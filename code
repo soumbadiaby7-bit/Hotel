@@ -1,0 +1,21 @@
+CREATE TABLE Reservation (
+  id_reservation INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   nom varchar(50) NOT NULL,
+  prenom varchar(50) NOT NULL,
+  telephone varchar(8)  NOT NULL,
+  type_chambre_prix varchar(255) NOT NULL,
+  date_arrivee date NOT NULL,
+  date_depart date NOT NULL,
+  nb_personnes int NOT NULL,
+  date_creation timestamp NULL DEFAULT CURRENT_TIMESTAMP);
+
+  CREATE TABLE commandes_plats (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  nom_client varchar(100) NOT NULL,
+  telephone varchar(8) NOT NULL,
+  plat varchar(100) NOT NULL,
+  quantite INT NOT NULL,
+  prix INT NOT NULL,
+  temps_commande datetime DEFAULT CURRENT_TIMESTAMP,
+    date_creation timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ;

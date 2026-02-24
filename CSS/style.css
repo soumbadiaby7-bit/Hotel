@@ -1,0 +1,19 @@
+/* CSS ficher pour  Accueil.html*/
+
+.titre-hotel {
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+}
+
+.sous-titre {
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: chocolate;
+    text-align: center;
+    
+}
+
+

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <title>Accueil | Hôtel_DS</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="CSS/style.css">
+      <script>
+         alert("Bienvenue à l’Hôtel_DS ! Nous sommes ravis de vous accueillir pour un séjour inoubliable. Profitez de notre confort, de notre luxe et de notre hospitalité exceptionnelle. N'hésitez pas à explorer nos chambres élégantes et à nous contacter pour toute demande spéciale. Votre satisfaction est notre priorité absolue. Bon séjour !");
+      </script>
+   </head>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-primary  fixed-top">
+            <div class="container">
+               <a class="navbar-brand" href="Plats.html">HôtelDS</a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="menu">
+                  <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link active" href="Accueil.html">Accueil</a></li>
+                     <li class="nav-item"><a class="nav-link" href="Appropos.html">À propos</a></li>
+                     <li class="nav-item"><a class="nav-link" href="Chambres.html">Chambres</a></li>
+                     <li class="nav-item"><a class="nav-link" href="Reservation.php">Réservation</a></li>
+                     <li class="nav-item"><a class="nav-link" href="Plats.html">Plats</a></li>
+                        <li class="nav-item"><a class="nav-link" href="exemple .html">Commande</a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+
+         <div class="container mt-5 py-5">
+ 
+    <div class="text-center mb-5">
+        <button class="btn btn-primary btn-lg" onclick="afficherPlat('entrees')">Entrées</button>
+        <button class="btn btn-warning btn-lg" onclick="afficherPlat('plats')">Plats principaux</button>
+        <button class="btn btn-danger btn-lg" onclick="afficherPlat('desserts')">Desserts</button>
+        <button class="btn btn-success btn-lg" onclick="afficherPlat('boissons')">Boissons</button>
+        <button class="btn btn-dark btn-lg" onclick="cacherPlats()">Masquer</button>
+    </div>
+
+
+    <div id="entrees" class="row g-4 d-none">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/ordevre.jpg" class="card-img-top" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Ordeuvre Salade</h5>
+                    <p class="description">Mélange de légumes frais avec vinaigrette maison.</p>
+                    <p class="prix">0 FCFA</p>
+                    <p>Offert</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Ordeuvre Salade&prix=0" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/soupe.jpg" class="card-img-top" alt="Soupe du Chef">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Soupe du Chef</h5>
+                    <p class="description">Soupe chaude  aux légumes et épices locales.</p>
+                    <p class="prix">0 FCFA</p>
+                    <p>Offert</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Soupe du Chef&prix=0" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/nouche.jpg" class="card-img-top" alt="Sushi">
+                <div class="card-body text-center">
+                    <h5 class="card-title">sushi</h5>
+                    <p class="description">sushi aux légumes.</p>
+                    <p class="prix">0 FCFA</p>
+                    <p>Offert</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=sushi&prix=0" class="text-decoration-none text-dark">Commander</a></button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="plats" class="row g-4 d-none">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/poulet rooti.jpg" class="card-img-top" alt="Poulet Rôti">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Poulet Rôti</h5>
+                    <p class="description">Poulet rôti aux herbes avec légumes de saison.</p>
+                    <p class="prix">10 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Poulet Rôti&prix=10000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/poison braiss.jpg" class="card-img-top" alt="Poisson Grillé">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Poisson Grillé</h5>
+                    <p class="description">Poisson frais grillé servi avec riz parfumé.</p>
+                    <p class="prix">10 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Poisson Grillé&prix=10000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/riz,a la sauce rouge.jpg" class="card-img-top" alt="Riz à la Sauce Rouge">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Riz à la Sauce Rouge</h5>
+                    <p class="description">Riz parfumé avec sauce rouge .</p>
+                    <p class="prix">5 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Riz à la Sauce Rouge&prix=5000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/revette.jpg" class="card-img-top" alt="Crevette">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Crevette</h5>
+                    <p class="description">Crevette accompagner des Huîtres.</p>
+                    <p class="prix">15 000 FCFA</p>
+                    <button class="btn btn-outline-warning">Commander</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/humberg.jpg" class="card-img-top" alt="Humburger">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Humburger</h5>
+                    <p class="description">Humburger avec légumes .</p>
+                    <p class="prix">3 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Humburger&prix=5000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/pizza.jpg" class="card-img-top" alt="Pizza">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pizza</h5>
+                    <p class="description">Pizza avec légumes et fromage.</p>
+                    <p class="prix">5 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Pizza&prix=5000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/kffc.jpg" class="card-img-top" alt="Kfc">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Kfc</h5>
+                    <p class="description">Kfc avec frites et sauce.</p>
+                    <p class="prix">6 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Kfc&prix=6000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desserts -->
+    <div id="desserts" class="row g-4 d-none">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/gateau au chocolat.jpg" class="card-img-top" alt="Gâteau au Chocolat">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Gâteau au Chocolat</h5>
+                    <p class="description">Gâteau au chocolat avec glaçage et fraise.</p>
+                    <p class="prix">5 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Gâteau au Chocolat&prix=5000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/gateau fraise.jpg" class="card-img-top" alt="Gâteau à la Fraise">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Gâteau à la Fraise</h5>
+                    <p class="description">Gâteau sucré garni de fraises fraîches.</p>
+                    <p class="prix">5 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Gâteau à la Fraise&prix=5000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/pancake.jpg" class="card-img-top" alt="Pancake">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Pancake</h5>
+                    <p class="description">Pancake sucré garni de fruits frais.</p>
+                    <p class="prix">3 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Pancake&prix=3000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/crepe.jpg" class="card-img-top" alt="Crêpe">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Crêpe</h5>
+                    <p class="description">Crêpe sucrée au chocolat.</p>
+                    <p class="prix">2 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Crêpe&prix=2000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/milkshake.jpg" class="card-img-top" alt="Milkshake">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Milkshake</h5>
+                    <p class="description">Milkshake au chocolat.</p>
+                    <p class="prix">3 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Milkshake&prix=3000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boissons -->
+    <div id="boissons" class="row g-4 d-none">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/jus orange.jpg" class="card-img-top" alt="Jus d'Orange">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Jus d'Orange</h5>
+                    <p class="description">Jus naturel d'orange fraîchement pressé.</p>
+                    <p class="prix">2 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Jus d'Orange&prix=2000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/jus anana.jpg" class="card-img-top" alt="Jus d'Ananas">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Jus d'Ananas</h5>
+                    <p class="description">Jus naturel d'ananas fraîchement pressé.</p>
+                    <p class="prix">3 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Jus d'Ananas&prix=3000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/fanta canett.jpg" class="card-img-top" alt="Fanta Canette">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fanta Canette</h5>
+                    <p class="description">Boisson gazeuse au goûts de citron et d'orange.</p>
+                    <p class="prix">2 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Fanta Canette&prix=2000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/Roche Mazet propose trois cocktails étonnants pour les fêtes de fin d'année.jpg" class="card-img-top" alt="">
+                <div class="card-body text-center">
+                    <h5 class="card-title">vin </h5>
+                    <p class="description">Vin rouge.</p>
+                    <p class="prix">3 000 FCFA</p>
+                    <button class="btn btn-outline-warning">Commander</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="images/Tasting The DAY & NIGHT DUO Wine Combo From The Prisoner Wine Company.jpg" class="card-img-top" alt="Vin Rouge et Blanc">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Vin Rouge et Blanc</h5>
+                    <p class="description">Vin rouge et blanc de qualité.</p>
+                    <p class="prix">10 000 FCFA</p>
+                    <button class="btn btn-outline-warning"><a href="Commandes_plats.php?plat=Vin Rouge et Blanc&prix=10000" class="text-decoration-none text-dark">Commander</a></button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+<script>
+function afficherPlat(type) {
+    // Masquer toutes les catégories
+    document.getElementById("entrees").classList.add("d-none");
+    document.getElementById("plats").classList.add("d-none");
+    document.getElementById("desserts").classList.add("d-none");
+    document.getElementById("boissons").classList.add("d-none");
+
+    // Afficher la catégorie choisie
+    document.getElementById(type).classList.remove("d-none");
+}
+
+function cacherPlats() {
+    document.getElementById("entrees").classList.add("d-none");
+    document.getElementById("plats").classList.add("d-none");
+    document.getElementById("desserts").classList.add("d-none");
+    document.getElementById("boissons").classList.add("d-none");
+}
+</script>
+
+
+
+
+
+
+
+
+
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   </body>
+   <footer class="bg-dark text-white text-center p-4">
+      <p>© 2026 Hôtel_DS | Tous droits réservés</p>
+   </footer>
+</html>
