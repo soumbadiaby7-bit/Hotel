@@ -5,11 +5,8 @@
       <title>Hôtel_DS</title>
       <link rel="stylesheet"
          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-      <script>
-         alert("Nos chambres : Découvrez nos chambres élégantes et confortables, conçues pour offrir une expérience de séjour inoubliable. Que vous recherchiez une chambre standard, une suite de luxe ou une chambre familiale spacieuse, nous avons l'option parfaite pour répondre à vos besoins. Profitez d'un confort exceptionnel, d'équipements modernes et d'une atmosphère chaleureuse pour rendre votre séjour à l’Hôtel_DS mémorable. Explorez nos différentes catégories de chambres et réservez dès maintenant pour vivre une expérience de séjour exceptionnelle !");
-      </script>   
    </head>
-   <body>
+   <body class="bg-light">
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
          <div class="container">
             <a class="navbar-brand" href="Chambres.html">Hôtel_DS</a>
@@ -18,9 +15,9 @@
             </button>
             <div class="collapse navbar-collapse" id="menu">
                <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link active" href="Accueil.html">Accueil</a></li>
+                  <li class="nav-item"><a class="nav-link " href="Accueil.html">Accueil</a></li>
                   <li class="nav-item"><a class="nav-link" href="Appropos.html">À propos</a></li>
-                  <li class="nav-item"><a class="nav-link" href="Chambres.html">Chambres</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="Chambres.html">Chambres</a></li>
                   <li class="nav-item"><a class="nav-link" href="Reservation.php">Réservation</a></li>
                   <li class="nav-item"><a class="nav-link" href="Plats.html">Plats</a></li>
                   <li class="nav-item"><a class="nav-link" href="Commandes_plats.php">Commande</a></li>
@@ -28,238 +25,344 @@
             </div>
          </div>
       </nav>
-      <header class="mt-5 pt-5">
-         <div class="bg-light py-4">
-            <h2 class="text-center">Nos Chambres</h2>
+      <section>
+         <div class="carousel-inner">
+         <div class="container py-5 mt-5">
+         <h2 class="text-center mb-4 fw-bold mt-5 border-bottom border-2 border-top border-2 border-dark">🏨Nos Chambres </h2>
+         <div class="text-center mb-5">
+         <!-- Boutons -->
+         <div class="text-center mb-0">
+            <button class="btn btn-primary btn-lg" onclick="afficher('standard')">Chambre Standard</button>
+            <button class="btn btn-warning btn-lg" onclick="afficher('familiale')">Chambre Familiale</button>
+            <button class="btn btn-danger btn-lg" onclick="afficher('luxe')">Chambre Luxe</button>
+            <button class="btn btn-dark btn-lg" onclick="cacherChambres()">Masquer</button>
          </div>
-      </header>
-      <section class="container my-5">
-         <div class="row">
-            <div class="col-md-4 mb-4">
-               <div class="card">
-                  <img src="./images/IMG_4909.JPG" class="w-100" style="height: 300px;" >
-                  <div class="card-body">
-                     <h5>Chambre Standard</h5>
-                     <p>À partir de 30 000 FCFA / nuit</p>
+         <section>
+            <div class="container py-5 mt-0">
+               <!-- Standard -->
+               <div id="standard" class="row g-4 ">
+                  <!-- Chambre 1 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre stand1.jpg" class=" w-100" style="height: 300px;" alt="Chambre Standard">
+                        <div class="card-body text-center">
+                           <h5 class="card-title">Chambre Standard</h5>
+                           <p class="prix">30 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard - 30000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 2 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre standard modeste2.jpg" class="w-100" style="height: 300px;" alt="Chambre Standard">
+                        <div class="card-body text-center">
+                           <h5 class="card-title">Chambre Standard modeste</h5>
+                           <p class="prix">35 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard modeste - 35000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 3 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre standard luxe.jpg" class="w-100" style="height: 300px;" alt="Chambre Standard">
+                        <div class="card-body text-center">
+                           <h5 class="card-title">Chambre Standard Luxe</h5>
+                           <p class="prix">40 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard Luxe - 40000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 4 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre stand4.jpg" class="w-100" style="height: 300px;" alt="Chambre Standard">
+                        <div class="card-body text-center">
+                           <h5 class="card-title">Chambre Standard Premium</h5>
+                           <p class="prix">45 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard Premium - 45000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                     <div class="card">
+                        <img src="./images/chambre stand2.jpg" class="w-100" style="height: 300px;" >
+                        <div class="card-body">
+                           <h5>Chambre Standard</h5>
+                           <p>À partir de 30 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard - 30000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="./images/chambre standarde2.jpg"  class="w-100" style="height: 300px;"  alt="Chambre Standard">
+                        <div class="card-body text-center">
+                           <h5>Chambre Standard modeste</h5>
+                           <p>35 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard modeste - 35000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                     <div class="card">
+                        <img src="./images/chambre standard lux2.JPEG" class="w-100" style="height: 300px;" >
+                        <div class="card-body">
+                           <h5>Chambre Standard Luxe</h5>
+                           <p>À partir de 40 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard Luxe - 40000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="./images/chambre standard premium.jpg"  class="w-100" style="height: 300px;"  alt="Chambre Standard">
+                        <div class="card-body text-center">
+                           <h5>Chambre Standard Premium</h5>
+                           <p>45 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Standard Premium - 45000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-            <div class="col-md-4 mb-4">
-               <div class="card">
-                  <img src="./images/fc1.jpg" class="w-100" style="height: 300px;" >
-                  <div class="card-body">
-                     <h5>Chambre Familliale</h5>
-                     <p>À partir de 50 000 FCFA / nuit</p>
+         </section>
+         <section>
+            <div class="container py-5 mt-0">
+               <!-- Familiale -->
+               <div id="familiale" class="row g-4 ">
+                  <!-- Chambre 1 -->
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img src="images/chambre famill stand.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Familiale Standard</h5>
+                           <p class="prix">90 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Familiale Standard - 90000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 2 -->
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img src="images/chambre famil  premium.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Familiale Premium</h5>
+                           <p class="prix">110 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Familiale Premium - 110000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 3 -->
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img src="images/chambre famill luxe.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Familiale Luxe</h5>
+                           <p class="prix">170 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Familiale Luxe - 170000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 1 -->
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img src="images/chambre familiale standard2.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Familiale Standard</h5>
+                           <p class="prix">90 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Familiale Standard - 90000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 2 -->
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img src="images/chambre familiale premium2.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Familiale Premium</h5>
+                           <p class="prix">110 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Familiale Premium - 110000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 3 -->
+                  <div class="col-md-4">
+                     <div class="card">
+                        <img src="images/chambre familiale luxe2.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Familiale Luxe</h5>
+                           <p class="prix">170 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Familiale Luxe - 170000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-            <div class="col-md-4 mb-4">
-               <div class="card">
-                  <img src="images/cha lux.jpg" class="w-100" style="height: 300px;" >
-                  <div class="card-body">
-                     <h5>Suite Luxe</h5>
-                     <p>À partir de 80 000 FCFA / nuit</p>
+         </section>
+         <section>
+            <div class="container py-5 mt-0">
+               <!-- Luxe -->
+               <div id="luxe" class="row g-4 ">
+                  <!-- Chambre 1 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre lux .jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe</h5>
+                           <p class="prix">120 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe - 120000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 2 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre lux simpl.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe Simple</h5>
+                           <p class="prix">140 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe Simple - 140000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 3 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre lux premium.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe Premium</h5>
+                           <p class="prix">160 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe Premium - 160000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 4 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre luxe royal.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe Royale</h5>
+                           <p class="prix">180 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe Royale - 180000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 1 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre lux 2.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe</h5>
+                           <p class="prix">120 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe - 120000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 2 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre lux simple.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe Simple</h5>
+                           <p class="prix">140 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe Simple - 140000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 3 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre lux premium2.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe Premium</h5>
+                           <p class="prix">160 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe Premium - 160000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Chambre 4 -->
+                  <div class="col-md-3">
+                     <div class="card">
+                        <img src="images/chambre lux roy2.jpg" class="w-100" style="height: 300px;">
+                        <div class="card-body text-center">
+                           <h5>Chambre Luxe Royale</h5>
+                           <p class="prix">180 000 FCFA / nuit</p>
+                           <button class="btn btn-outline-warning"><a href="Reservation.php?chambre=Chambre Luxe Royale - 180000 FCFA" class="text-decoration-none text-warning">
+                           Réserver
+                           </a></button>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-            <div class="col-md-4">
-               <div class="card">
-                  <img src="./images/lc.JPG"  class="w-100" style="height: 300px;"  alt="Chambre Standard">
-                  <div class="card-body text-center">
-                     <h5>Chambre Standard</h5>
-                     <p>30 000 FCFA / nuit</p>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="card">
-                  <img src="./IMAGES/cha famil.png" class="w-100" style="height: 300px;" alt="Chambre Deluxe">
-                  <div class="card-body text-center">
-                     <h5>Chambre Familliale</h5>
-                     <p>50 000 FCFA / nuit</p>
-                  </div>
-               </div>
-            </div>
-            <div class="col-md-4">
-               <div class="card">
-                  <img src="images/cha suit.jpg" class="w-100" style="height: 300px;" alt="Suite Luxe">
-                  <div class="card-body text-center">
-                     <h5>Suite Luxe</h5>
-                     <p>80 000 FCFA / nuit</p>
-                  </div>
-               </div>
-            </div>
-         </div>
+         </section>
       </section>
-
-<div class="container py-5">
-    <!-- Boutons -->
-    <div class="text-center mb-5">
-        <button class="btn btn-primary btn-lg" onclick="afficher('standard')">Chambre Standard</button>
-        <button class="btn btn-warning btn-lg" onclick="afficher('familiale')">Chambre Familiale</button>
-        <button class="btn btn-danger btn-lg" onclick="afficher('luxe')">Chambre Luxe</button>
-        <button class="btn btn-dark btn-lg" onclick="cacherChambres()">Masquer</button>
-    </div>
-
-    <!-- Standard -->
-    <div id="standard" class="row g-4 d-none">
-        <!-- Chambre 1 -->
-        <div class="col-md-3">
-            <div class="card">
-                <img src="images/chambre stand1.jpg" class=" w-100" style="height: 300px;" alt="Chambre Standard">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Chambre Standard</h5>
-                    <p class="prix">30 000 FCFA / nuit</p>
-                    <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-                </div>
-            </div>
-        </div>
-        <!-- Chambre 2 -->
-        <div class="col-md-3">
-            <div class="card">
-                <img src="images/chambre stand2.jpg" class="w-100" style="height: 300px;" alt="Chambre Standard">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Chambre Standard modeste</h5>
-                    <p class="prix">35 000 FCFA / nuit</p>
-                    <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Chambre 3 -->
-        <div class="col-md-3">
-            <div class="card">
-                <img src="images/chambre stand3.jpg" class="w-100" style="height: 300px;" alt="Chambre Standard">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Chambre Standard Luxe</h5>
-                    <p class="prix">40 000 FCFA / nuit</p>
-                    <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-                </div>
-            </div>
-        </div>
-
-         <!-- Chambre 4 -->
-        <div class="col-md-3">
-            <div class="card">
-                <img src="images/chambre stand4.jpg" class="w-100" style="height: 300px;" alt="Chambre Standard">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Chambre Standard Premium</h5>
-                    <p class="prix">45 000 FCFA / nuit</p>
-                    <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Familiale -->
-    <div id="familiale" class="row g-4 d-none">
-      <!-- Chambre 1 -->
-        <div class="col-md-4">
-            <div class="card">
-                <img src="images/chambre famill stand.jpg" class="w-100" style="height: 300px;">
-                <div class="card-body text-center">
-                    <h5>Chambre Familiale Standard</h5>
-                    <p class="prix">90 000 FCFA / nuit</p>
-                    <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-                </div>
-            </div>
-        </div>
-        <!-- Chambre 2 -->
-    <div class="col-md-4">
-        <div class="card">
-            <img src="images/chambre famil  premium.jpg" class="w-100" style="height: 300px;">
-            <div class="card-body text-center">
-                <h5>Chambre Familiale Premium</h5>
-                <p class="prix">110 000 FCFA / nuit</p>
-                  <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Chambre 3 -->
-    <div class="col-md-4">
-        <div class="card">
-            <img src="images/chambre famill luxe.jpg" class="w-100" style="height: 300px;">
-            <div class="card-body text-center">
-                <h5>Chambre Familiale Luxe</h5>
-                <p class="prix">170 000 FCFA / nuit</p>
-                  <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-            </div>
-        </div>
-    </div>
-
-    </div>
-
-    <!-- Luxe -->
-    <div id="luxe" class="row g-4 d-none">
-      <!-- Chambre 1 -->
-        <div class="col-md-3">
-            <div class="card">
-                <img src="images/chambre lux .jpg" class="w-100" style="height: 300px;">
-                <div class="card-body text-center">
-                    <h5>Chambre Luxe</h5>
-                    <p class="prix">120 000 FCFA / nuit</p>
-                    <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-                </div>
-            </div>
-        </div>
-        <!-- Chambre 2 -->
-    <div class="col-md-3">
-        <div class="card">
-            <img src="images/chambre lux simpl.jpg" class="w-100" style="height: 300px;">
-            <div class="card-body text-center">
-                <h5>Chambre Luxe Simple</h5>
-                <p class="prix">140 000 FCFA / nuit</p>
-                  <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-            </div>
-        </div>
-    </div>
-    <!-- Chambre 3 -->
-    <div class="col-md-3">
-        <div class="card">
-            <img src="images/chambre lux premium.jpg" class="w-100" style="height: 300px;">
-            <div class="card-body text-center">
-                <h5>Chambre Luxe Premium</h5>
-                <p class="prix">160 000 FCFA / nuit</p>
-                  <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-            </div>
-        </div>
-    </div>
-   <!-- Chambre 4 -->
-    <div class="col-md-3">
-        <div class="card">
-            <img src="images/chambre luxe royal.jpg" class="w-100" style="height: 300px;">
-            <div class="card-body text-center">
-                <h5>Chambre Luxe Royale</h5>
-                <p class="prix">180 000 FCFA / nuit</p>
-                  <button class="btn btn-outline-warning"><a href="Reservation.php">Réserver</a></button>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
-
-<script>
-function afficher(type) {
-    document.getElementById("standard").classList.add("d-none");
-    document.getElementById("familiale").classList.add("d-none");
-    document.getElementById("luxe").classList.add("d-none");
-
-    document.getElementById(type).classList.remove("d-none");
-}
-
-function cacherChambres() {
-    document.getElementById("standard").classList.add("d-none");
-    document.getElementById("familiale").classList.add("d-none");
-    document.getElementById("luxe").classList.add("d-none");
-}
-</script>
-         <a href="Reservation.php" class="btn btn-light mt-3"> CLIC pour réserver</a>
-
+      <script>
+         function afficher(type) {
+             const sections = ["standard", "familiale", "luxe"];
+         
+             sections.forEach(id => {
+                 document.getElementById(id).classList.add("d-none");
+             });
+         
+             document.getElementById(type).classList.remove("d-none");
+         }
+         
+         function cacherChambres() {
+             const sections = ["standard", "familiale", "luxe"];
+             sections.forEach(id => {
+                 document.getElementById(id).classList.add("d-none");
+             });
+         }
+      </script>
+      <a href="Reservation.php" class="btn btn-light mt-3"> CLIC pour réserver</a>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
    </body>
-   <footer class="bg-dark text-white text-center p-4">
+   <footer class="bg-primary text-white text-center p-4">
       <p>© 2026 Hôtel_Ds | Tous droits réservés</p>
    </footer>
 </html>
